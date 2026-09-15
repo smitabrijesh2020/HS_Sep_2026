@@ -1,0 +1,5 @@
+{
+  "_readme": "Template only. The real, filled-in file is config/column_mappings.json, created by the Column Mapping screen and git-ignored (it contains real column header names from live business files, not just this schema). Copy this file's shape, do not invent pass/fail business values here.",
+  "version": 1,
+  "sources": {}
+}

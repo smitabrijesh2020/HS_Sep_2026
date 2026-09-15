@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+
+# Local secrets and runtime state - never commit
+.env
+*.db
+*.sqlite3
+
+# Real column/status mapping config - contains real header names from live
+# business files, not just this project's schema. Only the .example.json
+# templates are tracked.
+config/column_mappings.json
+config/status_mappings.json
+
+# Caches and editor state
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+venv/
+.venv/
+*.log
