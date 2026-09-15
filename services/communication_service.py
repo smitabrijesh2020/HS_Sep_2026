@@ -20,6 +20,7 @@ from typing import Callable, Iterable
 
 from domain.enums import CommunicationStatus, CommunicationType
 from domain.models import CommunicationLogEntry
+from security.redaction import sanitize_error
 
 
 class SendResult:
@@ -53,14 +54,7 @@ def has_already_succeeded(
 
 
 def _sanitize_error(error: str | None) -> str | None:
-    if not error:
-        return error
-    # Defensive redaction in case a lower layer leaks a token/secret-looking string.
-    lowered = error.lower()
-    for marker in ("token", "secret", "password", "authorization"):
-        if marker in lowered:
-            return "Send failed: sanitized error (sensitive content redacted)."
-    return error[:500]
+    return sanitize_error(error)
 
 
 def dispatch(

@@ -21,6 +21,14 @@ class Settings(BaseSettings):
     database_url: str = Field(default="sqlite:///./hs_nomination.db", alias="DATABASE_URL")
     org_timezone: str = Field(default="Asia/Kolkata", alias="ORG_TIMEZONE")
 
+    local_source_folder_path: str = Field(default="", alias="LOCAL_SOURCE_FOLDER_PATH")
+    mapping_config_path: str = Field(
+        default="config/column_mappings.json", alias="MAPPING_CONFIG_PATH"
+    )
+    status_mapping_config_path: str = Field(
+        default="config/status_mappings.json", alias="STATUS_MAPPING_CONFIG_PATH"
+    )
+
     graph_tenant_id: str = Field(default="", alias="GRAPH_TENANT_ID")
     graph_client_id: str = Field(default="", alias="GRAPH_CLIENT_ID")
     graph_client_certificate_path: str = Field(default="", alias="GRAPH_CLIENT_CERTIFICATE_PATH")

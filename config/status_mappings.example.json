@@ -1,0 +1,5 @@
+{
+  "_readme": "Template only. The real, filled-in file is config/status_mappings.json, created by the Column Mapping screen and git-ignored. Pass/fail/pending value lists must come from actually observing the real source file's distinct values - never invent them here.",
+  "version": 1,
+  "rules": {}
+}

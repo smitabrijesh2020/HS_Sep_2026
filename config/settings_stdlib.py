@@ -32,6 +32,9 @@ class SimpleSettings:
     database_path: str = "hs_nomination.db"
     graph_dry_run: bool = True
     org_timezone: str = "Asia/Kolkata"
+    local_source_folder_path: str = ""
+    mapping_config_path: str = "config/column_mappings.json"
+    status_mapping_config_path: str = "config/status_mappings.json"
     escalation_offsets: dict = field(
         default_factory=lambda: {
             "Launch": 0,
@@ -52,4 +55,9 @@ def get_simple_settings(env_file: str = ".env") -> SimpleSettings:
         database_path=db_path,
         graph_dry_run=values.get("GRAPH_DRY_RUN", "true").lower() != "false",
         org_timezone=values.get("ORG_TIMEZONE", "Asia/Kolkata"),
+        local_source_folder_path=values.get("LOCAL_SOURCE_FOLDER_PATH", ""),
+        mapping_config_path=values.get("MAPPING_CONFIG_PATH", "config/column_mappings.json"),
+        status_mapping_config_path=values.get(
+            "STATUS_MAPPING_CONFIG_PATH", "config/status_mappings.json"
+        ),
     )
