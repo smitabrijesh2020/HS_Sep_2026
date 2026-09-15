@@ -45,3 +45,13 @@ docs/            architecture, assumptions, security checklist, runbook, traceab
 Do not point `sample_data/seed_synthetic.py` or any test at real employee
 exports. Use synthetic data only until a privacy review and RBAC layer are
 in place - see `docs/security_privacy_checklist.md`.
+
+## Session artifacts
+
+Working notes kept alongside the formal `docs/` folder:
+
+- [masterprompt.md](masterprompt.md) - the full original requirements brief (much larger than current scope)
+- [progress.md](progress.md) - gap analysis of this repo against that brief
+- [memory.md](memory.md) - durable facts a new session/contributor should read first
+- [lesson.md](lesson.md) - operational gotchas learned while working in this repo
+- [scratchpad.md](scratchpad.md) - informal, non-authoritative open TODOs
