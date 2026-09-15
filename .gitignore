@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+
+# Local secrets and runtime state - never commit
+.env
+*.db
+*.sqlite3
+
+# Caches and editor state
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+venv/
+.venv/
+*.log
